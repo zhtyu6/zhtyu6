@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = a * 100;
+            if (a == 0 && b == 0) {
+                break;
+            }
+            int k = 0;        
+            for(int j=0;j<10;j++) {
+                if (k == 0) {
+                    if ((c + j) % b == 0) {
+                        System.out.print("0"+j);
+                        k++;
+                    }
+                }else {if ((c + j) % b == 0) {
+                    System.out.print(" "+ "0"+j);
+                }
+                    
+                }
+            }
+            for (int i = 10; i < 100; i++) {
+                if (k == 0) {
+                    if ((c + i) % b == 0) {
+                        System.out.print(i);
+                        k++;
+                    }
+                }else {if ((c + i) % b == 0) {
+                    System.out.print(" "+i);
+                }
+                    
+                }
+            }
+            System.out.println();
+        }
+    }
+}
